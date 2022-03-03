@@ -1,5 +1,9 @@
 /*
- One use of a static member variable is to provide access control to some shared resource used by all objects of a class. For example, you might create several objects, each of which needs to write to a specific disk file. Clearly, however, only one object can be allowed to write to the file at a time. In this case, you will want to declare a static variable that indicates when the file is in use and when it is free. Each object then interrogates this variable before writing to the file. The following program shows how you might use a static variable of this type to control access to a scarce resource:
+ One use of a static member variable is to provide access control to some shared resource used by all objects of a class. 
+ For example, you might create several objects, each of which needs to write to a specific disk file. Clearly, 
+ however, only one object can be allowed to write to the file at a time. In this case, you will want to declare 
+ a static variable that indicates when the file is in use and when it is free. Each object then interrogates this 
+ variable before writing to the file. The following program shows how you might use a static variable of this type to control access to a scarce resource:
  
  
  */
