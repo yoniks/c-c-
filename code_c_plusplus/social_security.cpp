@@ -19,7 +19,9 @@
 
 #include <iostream>
 using namespace std;
-//declare precompiler
+/*declare,
+this is a way to create a constant that will work reliably
+#define for constants We use another part of the C preprocessor (CPP) to create constant settings of*/
 #define base_2022 6331*12 //initializtion
 #define level1 0.0597
 #define level2 0.1783
