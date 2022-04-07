@@ -8,7 +8,7 @@ using namespace std;
 
 
 // lower to uuper
-void uuper_string_by_ref(char &str){// ref to adrress
+void uuper_string_by_ref(char *str){// ref to adrress
     // it is not possible to change what the reference parameter is pointing to
   
    
@@ -31,18 +31,17 @@ void uuper_string_by_ref(char &str){// ref to adrress
     }
 }
 
-
-void add_dash_to_space_by_value(char *str){
-    int cou=0;
-    if(*str>32&&*str<127){
-        for(int i=0;*str;i++){// or *str!='\0'
-            if(*str==' '){
-                *str='-';
-            }
-            cout<<++cou;
-            str++;// next adrress
+   // sending copy of array
+void add_dash_to_space_by_value(char str[]){
+   
+  
+        for(int i=0;str[i];i++){// or str!='\0'
+           if(str[i]>32&&str[i]<127){
+            if(str[i]==' '){
+                str[i]='-';
+            }           
         }
-    }
+        }
 }
 #endif
     
