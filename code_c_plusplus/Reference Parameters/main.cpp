@@ -22,7 +22,7 @@ int main(){
     uuper_string_by_ref(str[0]);// or str
 // using call-by-value, a copy of the argument is passed to the function.
  //this means that code within a function cannot alter the arguments used to call the function.
-   add_dash_to_space_by_value(str);// pointer first address
+   add_dash_to_space_by_value(str);
     cout<<str<<"\n";
  
  
