@@ -90,7 +90,8 @@ private:
     C2 T;
     map<Country<string, string>,TData<string>> d;
     map<Country<string, string>,TData<int>> d1;
-    
+     string isTypeStr();// return value type of str
+    int isTypeInt();// return value type of int
 public:
     // member functions
     C1 getKeyType1(){
@@ -105,8 +106,7 @@ public:
    // Country(C1 _ad1,C1 _ad2,C1 ad3);
     void setValueString(string v);
     void setValueInt(int v);
-    string isTypeStr();// return value if str
-    int isTypeInt();// return value if int, save me copy code
+   
     
     C2 getStrBy1Key(C1 _ad1);
     C2 getStrBy2Key(C1 _ad1,C1 _ad2);
@@ -220,46 +220,7 @@ Country<C1, C2>::~Country(){}
 
 
 
-/*template<typename type1,typename type2>
-struct MapAt{
-private:
-    type1 key;
-    type2 value;
-          // key                //value
-    map<Country<type1, type2>, News<type2>> d;
-   typename map<Country<type1, type2>,News<type2>>::iterator r;
-public:
-   bool setKeyAndValue(type1 k,type2 v);
-    type2 getValue(type1 k);
-};
 
-template<typename type1,typename type2>
-bool MapAt<type1, type2>::setKeyAndValue(type1 k, type2 v)
-{
-    d.insert(pair<Country<type1 , type2>,News<type2>>(
-              Country<type1 ,type2 >(k),News<type2>(v)));
-    return false;
-}
-
-template<typename type1,typename type2>
-type2 MapAt<type1, type2>::getValue(type1 k){
-    
-
-      r= d.find(Country<type1, type2>(k));
-      if(r!=d.end()){
-          return r->second.getData();
-         // cout<<r->second.getData()<<"\n";
-      }
-    return false;
-}*/
-
-
-
-/*#if _LIBCPP_STD_VER > 11
-template <class C1=void,class C2=void>
-#else
-template <class C1, class C2>
-#endif*/
 
 
 
