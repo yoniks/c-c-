@@ -166,21 +166,25 @@ as int we must set int and return int
 return the value <type1,type2> by key*/
 template <class C1,class C2>
 C2 Country<C1, C2>::getStrBy1Key(C1 _ad1){
+    anyKeyType1=_ad1;
     T=  isTypeStr();
      return (C2)T;
 }
 template <class C1,class C2>
 C2 Country<C1, C2>::getStrBy2Key(C1 _ad1,C1 _ad2){
+    anyKeyType1= _ad1+_ad2;
        T=  isTypeStr();
         return (C2)T;
 }
 template <class C1,class C2>
 C2 Country<C1, C2>::getIntBy1Key(C1 _ad1){
+    anyKeyType1=_ad1;
     T=  isTypeInt();
      return (C2)T;
 }
 template <class C1,class C2>
 C2 Country<C1, C2>::getIntBy2Key(C1 _ad1,C1 _ad2){
+    anyKeyType1= _ad1+_ad2;
     T=  isTypeInt();
      return (C2)T;
 }
