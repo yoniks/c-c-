@@ -84,7 +84,7 @@ TData<N,Size>::~TData(){
 
 
 template <class C1, class C2>
-struct Country {
+struct Country {//or struct MultiKey{}
 private:
     C1 anyKeyType1, anyKeyType2;
     C2 T;
@@ -146,17 +146,17 @@ Country<C1, C2>::Country(C1 _ad1, C1 _ad2){
 
 template <class C1,class C2>
 void Country<C1, C2>::setValueString(string __v){
-    T=__v;
+ 
     d.insert(pair<Country<string , string>,TData<string>>
-             (Country<string, string>(anyKeyType1),TData<string>(T)));
+             (Country<string, string>(anyKeyType1),TData<string>(__v)));
        
 }
 
 template <class C1,class C2>
 void Country<C1, C2>::setValueInt(int __v){
-    T=__v;
+
     d1.insert(pair<Country<string , string>,TData<int>>
-             (Country<string, string>(anyKeyType1),TData<int>(T)));
+             (Country<string, string>(anyKeyType1),TData<int>(__v)));
      
 }
 
@@ -164,9 +164,13 @@ void Country<C1, C2>::setValueInt(int __v){
 /* <key, value> if we declared the value
 as int we must set int and return int
 return the value <type1,type2> by key*/
+
+/* return same type value we are declared,
+ if you try return wrong type for example value of key is int but fun return declared as c2 string
+you get wrong value, probably the compiler see the number from table ascii and rturen the char or the program throw*/
 template <class C1,class C2>
 C2 Country<C1, C2>::getStrBy1Key(C1 _ad1){
-    anyKeyType1=_ad1;
+    anyKeyType1=_ad1;                      
     T=  isTypeStr();
      return (C2)T;
 }
