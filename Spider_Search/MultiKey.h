@@ -104,8 +104,8 @@ public:
     Country(C1 _ad1);
     Country(C1 _ad1,C1 _ad2);
    // Country(C1 _ad1,C1 _ad2,C1 ad3);
-    void setValueString(string v);
-    void setValueInt(int v);
+    void setValueString(C2 v);
+    void setValueInt(C2 v);
    
     
     C2 getStrBy1Key(C1 _ad1);
@@ -128,7 +128,8 @@ bool operator<(Country<string, string>  a,Country<string, string> b){
 // by one key
 template <class C1,class C2>
 Country<C1, C2>::Country(C1 _ad1){
-    if(_ad1==C1{}){//if null
+     string isStrType;
+    if(_ad1==C1{}||typeid(_ad1)!=isStrType){//if null
         throw "Error";
     }
     anyKeyType1=_ad1;
@@ -137,7 +138,8 @@ Country<C1, C2>::Country(C1 _ad1){
 //by two key
 template <class C1,class C2>
 Country<C1, C2>::Country(C1 _ad1, C1 _ad2){
-    if(_ad1==C1{}||_ad2==C1{}){//if null
+     string isStrType;
+    if(_ad1==C1{}||_ad2==C1{}!!typeid(_ad1)!=isStrType){//if null or _ad1/2
         throw "Error";
     }
     anyKeyType1=_ad1+_ad2;
@@ -145,7 +147,7 @@ Country<C1, C2>::Country(C1 _ad1, C1 _ad2){
 
 
 template <class C1,class C2>
-void Country<C1, C2>::setValueString(string __v){
+void Country<C1, C2>::setValueString(C2 __v){
  
     d.insert(pair<Country<string , string>,TData<string>>
              (Country<string, string>(anyKeyType1),TData<string>(__v)));
@@ -153,7 +155,7 @@ void Country<C1, C2>::setValueString(string __v){
 }
 
 template <class C1,class C2>
-void Country<C1, C2>::setValueInt(int __v){
+void Country<C1, C2>::setValueInt(C2 __v){
 
     d1.insert(pair<Country<string , string>,TData<int>>
              (Country<string, string>(anyKeyType1),TData<int>(__v)));
