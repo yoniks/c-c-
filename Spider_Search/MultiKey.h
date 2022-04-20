@@ -129,7 +129,7 @@ bool operator<(Country<string, string>  a,Country<string, string> b){
 template <class C1,class C2>
 Country<C1, C2>::Country(C1 _ad1){
      string isStrType;
-    if(_ad1==C1{}||typeid(_ad1)!=isStrType){//if null
+    if(_ad1==C1{}||typeid(_ad1)!=typeid(isStrType)){//if null
         throw "Error";
     }
     anyKeyType1=_ad1;
@@ -139,7 +139,7 @@ Country<C1, C2>::Country(C1 _ad1){
 template <class C1,class C2>
 Country<C1, C2>::Country(C1 _ad1, C1 _ad2){
      string isStrType;
-    if(_ad1==C1{}||_ad2==C1{}!!typeid(_ad1)!=isStrType){//if null or _ad1/2
+    if(_ad1==C1{}||_ad2==C1{}!!typeid(_ad1)!=typeid(isStrType)){//if null or _ad1/2
         throw "Error";
     }
     anyKeyType1=_ad1+_ad2;
