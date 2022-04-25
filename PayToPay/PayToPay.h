@@ -147,7 +147,7 @@ public:
 
 class Store: public BaseUser{
   private:
-      double *totalPrice;
+      double totalPrice;
       string item;
       map<string,double> items;
 public:
@@ -160,7 +160,7 @@ public:
         return true;
    }
     bool setUserCard(CreditCard &__uc){
-        *totalPrice=__uc.price;
+        totalPrice=__uc.price;
        cout<<"";
        return false;
    }
@@ -170,7 +170,7 @@ public:
     }
     bool addItem(string i,double p){
         item=i;
-        *totalPrice+=p;
+        totalPrice+=p;
         items.insert(make_pair( i,p));
         if(!item.empty()){
             return true;
