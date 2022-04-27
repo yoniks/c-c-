@@ -29,12 +29,12 @@ int main(int argc, const char * argv[]) {
     }
     EncryptionCreditCard ecc;
     p=&ecc;//now pointer of BaseUser pointing
-    p_value_card= pubObj.numberCard;//move the first adress of arry
+   // p_value_card= pubObj.numberCard;//it not good idea to point on card if i want more memory from system operation
     
     for(int i=0;i<pubObj.SIZE;i++){
         p_value_card[i]=1234*(i+1);//initialize card
         cout<<" "<<p_value_card[i]<<" ";
-        
+        pubObj.numberCard[i]=1234*(i+1);
     }
     cout<<"__"<<p_value_card<<"\n ";
 
