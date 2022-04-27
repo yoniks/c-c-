@@ -84,7 +84,7 @@ public:
         for(int i=0;i<*size;i++){
             p_new_value[i]= p_value[i];
         }
-      // delete [] p_value;
+       delete [] p_value;// delete the piec of old memory and return allocations new heap memory *2,memory heap vs stack 
         return p_new_value;
     }
      bool encryptionCard(CreditCard  *__uc){
