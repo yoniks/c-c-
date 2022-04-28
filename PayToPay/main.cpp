@@ -46,10 +46,8 @@ int main(int argc, const char * argv[]) {
        
     }
  
-    Store ps;
-   // ecc.nameCard=""; private member
-    //p=&store;// now pointer of BaseUser pointing to object Store
     delete [] p_value_card;
+    deleteBase(new EncryptionCreditCard());
     p=NULL;
     return 0;
 }
