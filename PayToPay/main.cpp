@@ -19,10 +19,10 @@ int main(int argc, const char * argv[]) {
     pubObj.date[1]=26;
     cout<<"number card\n";
    
-    BaseUser *p=NULL;
+    BaseUser *p=NULL;// storeg in stack when function main return the pointer flushing
   unsigned short int *p_value_card=NULL;
     try {
-    p_value_card= new unsigned short int[pubObj.SIZE];
+    p_value_card= new unsigned short int[pubObj.SIZE];// storeg in heap when delete [] name the pointer flushing
     } catch (bad_alloc a) {
         return  1;
     }
