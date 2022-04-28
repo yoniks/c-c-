@@ -30,7 +30,7 @@ class BaseUser{
     
 public:
   
-    ~BaseUser(){}
+    virtual ~BaseUser(){}
     virtual bool setUserID(string &_email,string &_userID){
         return false;
     }
@@ -61,10 +61,16 @@ protected:
 
 class EncryptionCreditCard: public BaseUser,private CreditCard  {
 private:
-  //  unsigned short int EncCard[4]={0,0,0,0};
   string  email;
    string userID;
 public:
+ /*
+  Once you make a single method virtual, you are saying that someone can pass around 
+  the class to methods that take an interface. Those methods can do anything they want, 
+  including deleting the object,
+ */
+   EncryptionCreditCard(){}
+  virtual ~EncryptionCreditCard(){}
    bool setUserID(string &_email,string &_userID){
        if(_email.size()==0||_userID.size()==0){
            //throw "Error";
@@ -147,7 +153,16 @@ public:
     
 };
 
-
+/*
+since the EncryptionCreditCard class allocates memory in its
+constructor, it’s important that the EncryptionCreditCard destructor
+run to free that memory.
+the compiler knows to look for an overridden 
+destructor when delete is called on a pointer to a
+*/
+void deleteBase(BaseUser *p){
+    delete p;
+}
 
 class Store: public BaseUser{
   private:
