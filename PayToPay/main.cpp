@@ -40,6 +40,7 @@ int main(int argc, const char * argv[]) {
     if(p!=NULL){
     p->encryptionCard(&pubObj);
     p->decryptionCard(&pubObj);
+        //if i need extra array memory the safe way is allocation with heap (new) type and delete when we not need it 
     p_value_card= p->dynamicGrowArray(p_value_card, &pubObj.SIZE);
         // initialize a parameter of type 'unsigned short
         cout<<"size: "<<pubObj.SIZE<<  p_value_card[3] <<"\n";
