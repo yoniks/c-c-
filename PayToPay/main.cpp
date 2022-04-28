@@ -22,7 +22,6 @@ int main(int argc, const char * argv[]) {
     BaseUser *p=NULL;
   unsigned short int *p_value_card=NULL;
     try {
-        p=new BaseUser();
     p_value_card= new unsigned short int[pubObj.SIZE];
     } catch (bad_alloc a) {
         return  1;
