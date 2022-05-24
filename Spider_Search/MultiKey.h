@@ -23,8 +23,7 @@
 #include <map>
 #include <cstring>
 using namespace std;
-//template <typename  N, int Size>
-//extern int SIZE;
+/*
 template <class  N, int Size=50>
 struct TData {
 private:
@@ -40,10 +39,6 @@ public:
     TData(N n);
     TData();
 };
-/*template<class N, int Size>
-void News<N,Size>::setData(N *n){
-    p=n;
-}*/
 
 template<class N, int Size>
 TData<N,Size>::TData(N v){
@@ -79,7 +74,7 @@ TData<N,Size>::~TData(){
   //  cout<<"Destructing"<<"\n";
 }
 
-
+*/
 
 
 
