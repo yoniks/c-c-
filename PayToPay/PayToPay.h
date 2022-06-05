@@ -35,10 +35,6 @@ public:
         return false;
     }
   
-    virtual bool setUserCard(double prices){//
-       
-        return false;
-    }
     virtual bool decryptionCard(CreditCard *__uc){return false;}
     virtual  bool encryptionCard(CreditCard *__uc){return false; }
     virtual unsigned short int *dynamicGrowArray(unsigned short int *p_value,unsigned short int *size){return 0;}
