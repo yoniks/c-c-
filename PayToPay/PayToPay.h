@@ -164,61 +164,7 @@ void deleteBase(BaseUser *p){
     delete p;
 }
 
-class Store: public BaseUser{
-  private:
-     
-      double totalPrice=0;
-      string item="";
-      map<string,double> items;
-public:
-   
-    bool setUserID(string &_email,string &_userID){
-        if(_email.size()==0||_userID.size()==0){
-            //throw "Error";
-            return false;
-        }
-        return true;
-   }
-    
-    
-    bool setUserCard(Store pr){
-       
-       cout<<"";
-       return false;
-   }
-    bool removeItem(){
-        
-        return false;
-    }
-    bool addItem(string i,double p){
-        item=i;
-        totalPrice+=p;
-        items.insert(make_pair( i,p));
-        if(!item.empty()){
-            return true;
-        }
-        return false;
-    }
-    bool printItem(){
-        map<string,double>::iterator it;
-        for(it= items.begin(); it != items.end(); it++){//->it pointer to map
-            cout<<"item: \n"<<(*it).first<< "price: " << (*it).second<<"\n";
-        }
-        cout<<"totalPrice: "<<totalPrice<<"\n";
-        
-        return false;
-    }
-  
-    string getItem();
-    
-};
-bool operator<(Store  a,Store b){
-    return a.getItem()<b.getItem();
-}
 
-string Store::getItem(){
-    return item;
-}
 
 #endif /* PayToPay_h */
 /*
