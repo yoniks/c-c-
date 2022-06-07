@@ -11,6 +11,7 @@
 #include <typeinfo>
 #include <map>
 using namespace std;
+typedef unsigned short us_;
 //typedef struct CreditCard;
  struct CreditCard{
  
