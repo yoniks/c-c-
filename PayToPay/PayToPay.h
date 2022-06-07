@@ -17,10 +17,10 @@ typedef unsigned short us_;
  
      string nameCard;
      string CardOwner;
-    unsigned short int SIZE=4;
-    unsigned short int numberCard[4];//16 bits, 0 to 65,535
-    unsigned short int date[2];
-    unsigned short int securityCode;
+    us_ int SIZE=4;
+     us_ int numberCard[4];//16 bits, 0 to 65,535
+    us_ int date[2];
+   us_  int securityCode;
      double price=0;
  protected:
     const short int sizeEnc=5;
