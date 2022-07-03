@@ -69,6 +69,7 @@ int main(int argc, const char * argv[]) {
     mroot= addToNode(key, mroot);
     mroot= addToNode(key-2, mroot);
     mroot= addToNode(key+1, mroot);
+    delete mroot;
     return 0;
 }
 
