@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
-void solveEquation(int);
+void isCorrent(int);
 float solveEquation1(float);
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     
-    //solveEquation(3);
+    //isCorrent(3);
    // printf("%f \n", solveEquation1(3));
      
     if(solveEquation1(4)==17){
@@ -19,7 +19,7 @@ int main(int argc, const char * argv[]) {
 
 
 //4x + 13(x + 3) + 7(3x)= 115
-void solveEquation(int x){
+void isCorrent(int x){// we send number and the method check if the equation is equale after solve it 
     
     int result=115;
     int temp=0;
@@ -34,7 +34,7 @@ void solveEquation(int x){
 }
 
 
-//4(x - 5) = 48
+//4(x - 5) = 48  the method will return the solution.
 float solveEquation1(float x1){
     // We have to undo the outer multiplication before we can do anything about the inner //subtraction
     float x = 1;
