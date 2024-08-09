@@ -7,8 +7,8 @@ struct node{
 };
 
 node *creatRoot(){
-    //the logica are numbers that smaller
-    //50/root will go left else to right
+    //the logica of algoriten is checking numbers that smaller
+    //50/ or large and organization in nodes of tree
     node *root=new node();
     root->key=50;
     root->left=NULL;
