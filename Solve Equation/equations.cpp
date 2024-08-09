@@ -19,7 +19,7 @@ int main(int argc, const char * argv[]) {
 
 
 //4x + 13(x + 3) + 7(3x)= 115
-void isCorrent(int x){// we send number and the method check if the equation is equale after solve it 
+void isCorrent(int x){// the function get a number to do a math than return true if the result is equal
     
     int result=115;
     int temp=0;
