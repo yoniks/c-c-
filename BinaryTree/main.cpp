@@ -30,9 +30,9 @@ node *createRight(int this_key,node *this_right){
     return this_right;
 }
 node *addToNode(int key ,node *p_node){
-    // if the first check the has been bigger to 50
-    // so next node will be right->left or tight->right,
-    //else if smoller to 50 so next node ponter to left->left or left->right.
+    // if first check has been bigger than 50
+    // so next node will be right->left or right->right,
+    //another case if less than 50 next node is ponter to left->left or left->right.
     std::cout<<p_node->key<<"\n";
     if(key<p_node->key){// the root
         
