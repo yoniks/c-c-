@@ -30,8 +30,8 @@ node *createRight(int this_key,node *this_right){
     return this_right;
 }
 node *addToNode(int key ,node *p_node){
-    // if first check has been bigger than 50
-    // so next node will be right->left or right->right,
+    // if first bode tree is large or equal 50
+    // than next node pointer to right->left or right->right,
     //another case if less than 50 next node is ponter to left->left or left->right.
     std::cout<<p_node->key<<"\n";
     if(key<p_node->key){// the root
